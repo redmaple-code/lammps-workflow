@@ -1,0 +1,137 @@
+Bundled LAMMPS manual 23Jun2022 update4, PDF pages 1962-1965
+LAMMPS Documentation, Release 23Jun2022 update4
+18.72.5 Restrictions
+none
+18.72.6 Related commands
+compute pe/atom
+18.72.7 Default
+none
+18.73 compute pe/atom command
+18.73.1 Syntax
+compute ID group-ID pe/atom keyword ...
+• ID, group-ID are documented in compute command
+• pe/atom = style name of this compute command
+• zero or more keywords may be appended
+• keyword = pair or bond or angle or dihedral or improper or kspace or fix
+18.73.2 Examples
+compute 1 all pe/atom
+compute 1 all pe/atom pair
+compute 1 all pe/atom pair bond
+18.73.3 Description
+Define a computation that computes the per-atom potential energy for each atom in a group. See the compute pe
+command if you want the potential energy of the entire system.
+The per-atom energy is calculated by the various pair, bond, etc potentials defined for the simulation. If no extra
+keywords are listed, then the potential energy is the sum of pair, bond, angle, dihedral,improper, kspace (long-range),
+and fix energy. I.e. it is as if all the keywords were listed. If any extra keywords are listed, then only those components
+are summed to compute the potential energy.
+Note that the energy of each atom is due to its interaction with all other atoms in the simulation, not just with other
+atoms in the group.
+For an energy contribution produced by a small set of atoms (e.g. 4 atoms in a dihedral or 3 atoms in a Tersoff 3-body
+interaction), that energy is assigned in equal portions to each atom in the set. E.g. 1/4 of the dihedral energy to each of
+the 4 atoms.
+The dihedral_style charmm style calculates pairwise interactions between 1-4 atoms. The energy contribution of these
+terms is included in the pair energy, not the dihedral energy.
+1848
+Chapter 18. Computes
+
+LAMMPS Documentation, Release 23Jun2022 update4
+The KSpace contribution is calculated using the method in (Heyes) for the Ewald method and a related method for
+PPPM, as specified by the kspace_style pppm command. For PPPM, the calculation requires 1 extra FFT each timestep
+that per-atom energy is calculated. This document describes how the long-range per-atom energy calculation is per-
+formed.
+Various fixes can contribute to the per-atom potential energy of the system if the fix contribution is included. See the
+doc pages for individual fixes for details of which ones compute a per-atom potential energy.
+Note: The fix_modify energy yes command must also be specified if a fix is to contribute per-atom potential energy to
+this command.
+As an example of per-atom potential energy compared to total potential energy, these lines in an input script should
+yield the same result in the last 2 columns of thermo output:
+compute
+peratom all pe/atom
+compute
+pe all reduce sum c_peratom
+thermo_style
+custom step temp etotal press pe c_pe
+Note: The per-atom energy does not include any Lennard-Jones tail corrections to the energy added by the pair_modify
+tail yes command, since those are contributions to the global system energy.
+18.73.4 Output info
+This compute calculates a per-atom vector, which can be accessed by any command that uses per-atom values from a
+compute as input. See the Howto output page for an overview of LAMMPS output options.
+The per-atom vector values will be in energy units.
+18.73.5 Restrictions
+18.73.6 Related commands
+compute pe, compute stress/atom
+18.73.7 Default
+none
+(Heyes) Heyes, Phys Rev B 49, 755 (1994),
+18.73. compute pe/atom command
+1849
+
+LAMMPS Documentation, Release 23Jun2022 update4
+18.74 compute plasticity/atom command
+18.74.1 Syntax
+compute ID group-ID plasticity/atom
+• ID, group-ID are documented in compute command
+• plasticity/atom = style name of this compute command
+18.74.2 Examples
+compute 1 all plasticity/atom
+18.74.3 Description
+Define a computation that calculates the per-atom plasticity for each atom in a group. This is a quantity relevant for
+Peridynamics models. See this document for an overview of LAMMPS commands for Peridynamics modeling.
+The plasticity for a Peridynamic particle is the so-called consistency parameter (lambda). For elastic deformation
+lambda = 0, otherwise lambda > 0 for plastic deformation. For details, see (Mitchell) and the PDF doc included in the
+LAMMPS distribution in doc/PDF/PDLammps_EPS.pdf.
+This command can be invoked for one of the Peridynamic pair styles: peri/eps.
+The plasticity value will be 0.0 for atoms not in the specified compute group.
+18.74.4 Output info
+This compute calculates a per-atom vector, which can be accessed by any command that uses per-atom values from a
+compute as input. See the Howto output page for an overview of LAMMPS output options.
+The per-atom vector values are unitless numbers (lambda) >= 0.0.
+18.74.5 Restrictions
+This compute is part of the PERI package. It is only enabled if LAMMPS was built with that package. See the Build
+package page for more info.
+18.74.6 Related commands
+compute damage/atom, compute dilatation/atom
+1850
+Chapter 18. Computes
+
+LAMMPS Documentation, Release 23Jun2022 update4
+18.74.7 Default
+none
+(Mitchell) Mitchell, “A non-local, ordinary-state-based viscoelasticity model for peridynamics”, Sandia National Lab
+Report, 8064:1-28 (2011).
+18.75 compute pressure command
+18.75.1 Syntax
+compute ID group-ID pressure temp-ID keyword ...
+• ID, group-ID are documented in compute command
+• pressure = style name of this compute command
+• temp-ID = ID of compute that calculates temperature, can be NULL if not needed
+• zero or more keywords may be appended
+• keyword = ke or pair or bond or angle or dihedral or improper or kspace or fix or virial or pair/hybrid
+18.75.2 Examples
+compute 1 all pressure thermo_temp
+compute 1 all pressure NULL pair bond
+compute 1 all pressure NULL pair/hybrid lj/cut
+18.75.3 Description
+Define a computation that calculates the pressure of the entire system of atoms. The specified group must be “all”. See
+the compute stress/atom command if you want per-atom pressure (stress). These per-atom values could be summed for
+a group of atoms via the compute reduce command.
+The pressure is computed by the formula
+P = NkBT
+V
++ ∑N′
+i
+ri • fi
+dV
+where N is the number of atoms in the system (see discussion of DOF below), kB is the Boltzmann constant, T is the
+temperature, d is the dimensionality of the system (2 or 3 for 2d/3d), and V is the system volume (or area in 2d). The
+second term is the virial, equal to -dU/dV, computed for all pairwise as well as 2-body, 3-body, 4-body, many-body,
+and long-range interactions, where ri and fi are the position and force vector of atom i, and the black dot indicates a
+dot product. This is computed in parallel for each sub-domain and then summed over all parallel processes. Thus N’
+necessarily includes atoms from neighboring sub-domains (so-called ghost atoms) and the position and force vectors of
+ghost atoms are thus included in the summation. Only when running in serial and without periodic boundary conditions
+is N’ = N = the number of atoms in the system. Fixes that impose constraints (e.g. the fix shake command) may also
+contribute to the virial term.
+A symmetric pressure tensor, stored as a 6-element vector, is also calculated by this compute. The 6 components of
+the vector are ordered xx, yy, zz, xy, xz, yz. The equation for the I,J components (where I and J = x,y,z) is similar to
+18.75. compute pressure command
+1851

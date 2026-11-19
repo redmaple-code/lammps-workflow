@@ -1,0 +1,76 @@
+{
+  "items": [
+    {
+      "id": "wf-00",
+      "workflowId": "grinding",
+      "slotName": "wf-00-output",
+      "artifactType": "json",
+      "schemaRef": "problem",
+      "cardinality": "one",
+      "semanticConstraints": {}
+    },
+    {
+      "id": "wf-r",
+      "workflowId": "grinding",
+      "slotName": "wf-r-output",
+      "artifactType": "json",
+      "schemaRef": "problem",
+      "cardinality": "one",
+      "semanticConstraints": {}
+    },
+    {
+      "id": "wf-01",
+      "workflowId": "grinding",
+      "slotName": "wf-01-output",
+      "artifactType": "json",
+      "schemaRef": "problem",
+      "cardinality": "one",
+      "semanticConstraints": {}
+    },
+    {
+      "id": "wf-02",
+      "workflowId": "grinding",
+      "slotName": "wf-02-output",
+      "artifactType": "json",
+      "schemaRef": "problem",
+      "cardinality": "one",
+      "semanticConstraints": {}
+    },
+    {
+      "id": "wf-03a",
+      "workflowId": "grinding",
+      "slotName": "wf-03a-output",
+      "artifactType": "json",
+      "schemaRef": "problem",
+      "cardinality": "one",
+      "semanticConstraints": {}
+    },
+    {
+      "id": "execute",
+      "workflowId": "grinding",
+      "slotName": "execute-output",
+      "artifactType": "json",
+      "schemaRef": "problem",
+      "cardinality": "one",
+      "semanticConstraints": {}
+    },
+    {
+      "id": "wf-04",
+      "workflowId": "grinding",
+      "slotName": "wf-04-output",
+      "artifactType": "json",
+      "schemaRef": "problem",
+      "cardinality": "one",
+      "semanticConstraints": {}
+    },
+    {
+      "id": "wf-05",
+      "workflowId": "grinding",
+      "slotName": "wf-05-output",
+      "artifactType": "json",
+      "schemaRef": "problem",
+      "cardinality": "one",
+      "semanticConstraints": {}
+    }
+  ]
+}

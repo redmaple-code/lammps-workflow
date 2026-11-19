@@ -1,0 +1,37 @@
+{
+  "items": [
+    {
+      "id": "architect"
+    },
+    {
+      "id": "reasoner"
+    },
+    {
+      "id": "writer"
+    },
+    {
+      "id": "executor"
+    },
+    {
+      "id": "analyst"
+    },
+    {
+      "id": "post-processor"
+    },
+    {
+      "id": "librarian"
+    },
+    {
+      "id": "paper-researcher"
+    },
+    {
+      "id": "kb-coordinator"
+    },
+    {
+      "id": "kb-curator"
+    },
+    {
+      "id": "kb-reviewer"
+    }
+  ]
+}

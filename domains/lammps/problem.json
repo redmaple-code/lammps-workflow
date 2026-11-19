@@ -1,0 +1,22 @@
+{
+  "type": "object",
+  "required": [
+    "goal",
+    "features",
+    "criteria"
+  ],
+  "properties": {
+    "goal": {
+      "type": "string"
+    },
+    "features": {
+      "type": "array",
+      "minItems": 1
+    },
+    "criteria": {
+      "type": "array",
+      "minItems": 1
+    }
+  },
+  "additionalProperties": true
+}

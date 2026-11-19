@@ -1,0 +1,122 @@
+Source LAMMPS bundled PDF Release 23Jun2022 update4; PDF page 41
+17.85.36
+fix_modify AtC mesh add_to_nodeset command
+. . . . . . . . . . . . . . . . . . . . . 1391
+17.85.37
+fix_modify AtC mesh create command . . . . . . . . . . . . . . . . . . . . . . . . . . . 1392
+17.85.38
+fix_modify AtC mesh create_elementset command
+. . . . . . . . . . . . . . . . . . . . 1393
+17.85.39
+fix_modify AtC mesh create_faceset box command . . . . . . . . . . . . . . . . . . . . 1394
+17.85.40
+fix_modify AtC mesh create_faceset plane command . . . . . . . . . . . . . . . . . . . 1395
+17.85.41
+fix_modify AtC mesh create_nodeset command . . . . . . . . . . . . . . . . . . . . . . 1396
+17.85.42
+fix_modify AtC mesh delete_elements command
+. . . . . . . . . . . . . . . . . . . . . 1396
+17.85.43
+fix_modify AtC mesh nodeset_to_elementset command . . . . . . . . . . . . . . . . . . 1397
+17.85.44
+fix_modify AtC mesh output command
+. . . . . . . . . . . . . . . . . . . . . . . . . . 1398
+17.85.45
+fix_modify AtC mesh quadrature command . . . . . . . . . . . . . . . . . . . . . . . . 1399
+17.85.46
+fix_modify AtC mesh read command . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1400
+17.85.47
+fix_modify AtC mesh write command . . . . . . . . . . . . . . . . . . . . . . . . . . . 1401
+17.85.48
+fix_modify AtC output command . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1401
+17.85.49
+fix_modify AtC output boundary_integral command
+. . . . . . . . . . . . . . . . . . . 1402
+17.85.50
+fix_modify AtC output contour_integral command
+. . . . . . . . . . . . . . . . . . . . 1403
+17.85.51
+fix_modify AtC output nodeset command . . . . . . . . . . . . . . . . . . . . . . . . . 1404
+17.85.52
+fix_modify AtC output volume_integral command . . . . . . . . . . . . . . . . . . . . . 1405
+17.85.53
+fix_modify AtC pair_interactions command . . . . . . . . . . . . . . . . . . . . . . . . 1406
+17.85.54
+fix_modify AtC bond_interactions command
+. . . . . . . . . . . . . . . . . . . . . . . 1406
+17.85.55
+fix_modify AtC poisson_solver command . . . . . . . . . . . . . . . . . . . . . . . . . 1407
+17.85.56
+fix_modify AtC read_restart command . . . . . . . . . . . . . . . . . . . . . . . . . . . 1408
+17.85.57
+fix_modify AtC remove_molecule command . . . . . . . . . . . . . . . . . . . . . . . . 1408
+17.85.58
+fix_modify AtC remove_source command . . . . . . . . . . . . . . . . . . . . . . . . . 1409
+17.85.59
+fix_modify AtC remove_species command . . . . . . . . . . . . . . . . . . . . . . . . . 1410
+17.85.60
+fix_modify AtC reset_atomic_reference_positions command . . . . . . . . . . . . . . . 1411
+17.85.61
+fix_modify AtC reset_time command
+. . . . . . . . . . . . . . . . . . . . . . . . . . . 1412
+17.85.62
+fix_modify AtC sample_frequency command . . . . . . . . . . . . . . . . . . . . . . . 1412
+17.85.63
+fix_modify AtC set reference_potential_energy command . . . . . . . . . . . . . . . . . 1413
+17.85.64
+fix_modify AtC source command . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1414
+17.85.65
+fix_modify AtC source_integration command . . . . . . . . . . . . . . . . . . . . . . . 1415
+17.85.66
+fix_modify AtC temperature_definition command . . . . . . . . . . . . . . . . . . . . . 1416
+17.85.67
+fix_modify AtC filter command
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1416
+17.85.68
+fix_modify AtC time_integration command . . . . . . . . . . . . . . . . . . . . . . . . 1417
+17.85.69
+fix_modify AtC track_displacement command . . . . . . . . . . . . . . . . . . . . . . . 1418
+17.85.70
+fix_modify AtC unfix command
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1419
+17.85.71
+fix_modify AtC unfix_flux command . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1420
+17.85.72
+fix_modify AtC write_atom_weights command . . . . . . . . . . . . . . . . . . . . . . 1421
+17.85.73
+fix_modify AtC write_restart command . . . . . . . . . . . . . . . . . . . . . . . . . . 1422
+17.86
+fix mol/swap command . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1422
+17.86.1
+Syntax . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1422
+17.86.2
+Examples . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1423
+17.86.3
+Description . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1423
+17.86.4
+Restart, fix_modify, output, run start/stop, minimize info . . . . . . . . . . . . . . . . . 1424
+17.86.5
+Restrictions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1425
+17.86.6
+Related commands . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1425
+17.86.7
+Default
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1425
+17.87
+fix momentum command . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1425
+17.88
+fix momentum/chunk command
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1425
+17.88.1
+Syntax . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1425
+17.88.2
+Examples . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1426
+17.88.3
+Description . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1426
+17.88.4
+Restart, fix_modify, output, run start/stop, minimize info . . . . . . . . . . . . . . . . . 1426
+17.88.5
+Restrictions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1427
+17.88.6
+Related commands . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1427
+xxxix

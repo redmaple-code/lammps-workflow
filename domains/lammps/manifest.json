@@ -1,0 +1,408 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "lammps-hea",
+  "version": "0.1.0",
+  "publicationStatus": "draft",
+  "scope": {
+    "domains": [
+      "molecular-dynamics"
+    ],
+    "scales": [
+      "microscopic"
+    ],
+    "tasks": [
+      "grinding"
+    ],
+    "exclusions": [
+      "quantitative-production-grinding-prediction"
+    ]
+  },
+  "kernelCompatibility": ">=1.0.0 <2.0.0",
+  "dependencies": [],
+  "resources": [
+    {
+      "id": "problem",
+      "kind": "problemSchema",
+      "path": "problem.json",
+      "availability": "available",
+      "digest": "sha256:c9ac764eff358e8476645e03acadde6328aaa55809f32710e209824bd4d7f576"
+    },
+    {
+      "id": "knowledge",
+      "kind": "knowledge",
+      "path": "knowledge.json",
+      "availability": "available",
+      "digest": "sha256:950b29f5925d3c044dbb331c7e058f7a5dc7ea509c0b7cdc76be62ae37f1e152"
+    },
+    {
+      "id": "models",
+      "kind": "model",
+      "path": "models.json",
+      "availability": "available",
+      "digest": "sha256:9e515d78e83da8fb08c4cb7eb3d5d7c31f9d3cc229fb79533bb55d5942d7f600"
+    },
+    {
+      "id": "vocabulary",
+      "kind": "vocabulary",
+      "path": "vocabulary.json",
+      "availability": "available",
+      "digest": "sha256:a4634f45e93f5008b8eeb61b7b3967fa77cbaecd67227c2f30420d0f8ce90d70"
+    },
+    {
+      "id": "checks",
+      "kind": "check",
+      "path": "checks.json",
+      "availability": "available",
+      "digest": "sha256:7b5d8a2e6ef98d78a27870b21a4a1d7f11afca7cb709b57cb11cb568e4ccd448"
+    },
+    {
+      "id": "metrics",
+      "kind": "metric",
+      "path": "metrics.json",
+      "availability": "available",
+      "digest": "sha256:a19ae073cce971796897e04fc178b576cc4bbbecb3ce1f69d413e009c24d6398"
+    },
+    {
+      "id": "failures",
+      "kind": "failure",
+      "path": "failures.json",
+      "availability": "available",
+      "digest": "sha256:907e54c88da2d5e7461eca511ac44611df45b34a89cca4542741f06d180880ea"
+    },
+    {
+      "id": "templates",
+      "kind": "template",
+      "path": "templates.json",
+      "availability": "available",
+      "digest": "sha256:cda793c988d923dbc918bad4d49df78523a39aa61ec85163d4657cd4829e8fdc"
+    },
+    {
+      "id": "roles",
+      "kind": "role",
+      "path": "roles.json",
+      "availability": "available",
+      "digest": "sha256:f5371ec13eb518257186fe54f866b866e3e290e9e33e8e7af6e83377f2af380a"
+    },
+    {
+      "id": "validation",
+      "kind": "validation",
+      "path": "validation.json",
+      "availability": "available",
+      "digest": "sha256:53e7f339453250c2f60529e29d97df56bef09054f0a10dd7bd23958f848c923c"
+    },
+    {
+      "id": "artifacts",
+      "kind": "artifactSchema",
+      "path": "artifacts.json",
+      "availability": "available",
+      "digest": "sha256:041d5b9ffb5d2622ebc45b09d659e8c0b22419f75c085eb5ad561d98711278fa"
+    },
+    {
+      "id": "asset-11",
+      "kind": "model",
+      "path": "assets/FeNiCrCoCu-heafixed.setfl",
+      "availability": "available",
+      "digest": "sha256:5e6799423277ae38aeb0e51ccb68c9d1c97ffc05b79580eec6d869d56b988430"
+    },
+    {
+      "id": "asset-12",
+      "kind": "knowledge",
+      "path": "references/compute-centro_atom-command.txt",
+      "availability": "available",
+      "digest": "sha256:0118469becfde07bc2c112e6208c1d9ad6afc94b40e044630eee625390a8af6e"
+    },
+    {
+      "id": "asset-13",
+      "kind": "knowledge",
+      "path": "references/compute-cna_atom-command.txt",
+      "availability": "available",
+      "digest": "sha256:b6e47d342bed290bf984ad769d35e74eccf8500c308cf1d66ba1f5b8396b9aea"
+    },
+    {
+      "id": "asset-14",
+      "kind": "knowledge",
+      "path": "references/compute-coord_atom-command.txt",
+      "availability": "available",
+      "digest": "sha256:005ced80a293a4502d5404b600b52736a43218c57e83a6f1abb1f6ac190029c5"
+    },
+    {
+      "id": "asset-15",
+      "kind": "knowledge",
+      "path": "references/compute-pe_atom-command.txt",
+      "availability": "available",
+      "digest": "sha256:52c45eedfa6ffad07938eede3930cee330f75148325d8e22c0c72923dbca41ce"
+    },
+    {
+      "id": "asset-16",
+      "kind": "knowledge",
+      "path": "references/fix-indent-command.txt",
+      "availability": "available",
+      "digest": "sha256:0217d0e556441e25b0f630a7b2fc039d8d07e9592d6a471e30ff788ec78bd9fb"
+    },
+    {
+      "id": "asset-17",
+      "kind": "knowledge",
+      "path": "references/fix-print-command.corrected.txt",
+      "availability": "available",
+      "digest": "sha256:efe4a533b95c01d477d5dd51635c6cab2dc9d57d4d70204cd9ae9e7fc1f74bb0"
+    },
+    {
+      "id": "asset-18",
+      "kind": "knowledge",
+      "path": "references/fix-print-command.txt",
+      "availability": "available",
+      "digest": "sha256:3696127626349a08310a0df9b7199d251d21b716abc475258573b8dbbbcdcd6f"
+    },
+    {
+      "id": "asset-19",
+      "kind": "knowledge",
+      "path": "references/in.indent.lmp",
+      "availability": "available",
+      "digest": "sha256:e6e9d6e4731f2efbc9e9184065fd4a66ca30bf81bb0fa11a61ecf67bddf07ca3"
+    },
+    {
+      "id": "asset-20",
+      "kind": "knowledge",
+      "path": "references/pair_style-eam-command.txt",
+      "availability": "available",
+      "digest": "sha256:ece5849a240b425e12386dcbbe1ded4e623e2fceb308ec7cc78d880fc31aed3c"
+    },
+    {
+      "id": "asset-21",
+      "kind": "knowledge",
+      "path": "references/read_data-command.txt",
+      "availability": "available",
+      "digest": "sha256:001e1f22fbf8d6e534313e586f5199033ea99dcee7afc6a31a3ff3a437e68672"
+    },
+    {
+      "id": "asset-22",
+      "kind": "knowledge",
+      "path": "references/set-command.txt",
+      "availability": "available",
+      "digest": "sha256:e7a41302788fc7ba1ad1972557f9c3f30a7dca6469e4cc50000e70310c4199ac"
+    },
+    {
+      "id": "asset-23",
+      "kind": "knowledge",
+      "path": "references/velocity-command.txt",
+      "availability": "available",
+      "digest": "sha256:432e7711ff5f3fb789b76672dbdb811abf85df8923c48cf34a8524b2d7102e4b"
+    }
+  ],
+  "entrypoints": {
+    "problemSchema": "problem",
+    "knowledge": [
+      "knowledge"
+    ],
+    "models": [
+      "models"
+    ],
+    "vocabulary": "vocabulary",
+    "checks": [
+      "checks"
+    ],
+    "metrics": [
+      "metrics"
+    ],
+    "failures": "failures",
+    "templates": [
+      "templates"
+    ],
+    "roles": "roles",
+    "validation": [
+      "validation"
+    ],
+    "artifactSchemas": [
+      "artifacts"
+    ]
+  },
+  "requiredCapabilities": [
+    "molecular.dynamics.solve"
+  ],
+  "defaultToolProfile": "local-validation",
+  "toolProfiles": [
+    {
+      "id": "local-validation",
+      "bindings": [
+        {
+          "capability": "molecular.dynamics.solve",
+          "adapterId": "local-lammps",
+          "adapterVersionRange": ">=0.1.0 <1.0.0",
+          "toolVersionRange": "*",
+          "validationStatus": "unverified"
+        }
+      ]
+    }
+  ],
+  "defaultWorkflow": "grinding",
+  "workflows": [
+    {
+      "id": "grinding",
+      "taskType": "grinding",
+      "inputs": [
+        "request"
+      ],
+      "outputs": [
+        "wf-05-output"
+      ],
+      "stages": [
+        {
+          "id": "wf-00",
+          "kind": "action",
+          "role": "architect",
+          "needs": [],
+          "consumes": [
+            "request"
+          ],
+          "produces": [
+            "wf-00-output"
+          ],
+          "checkRefs": [
+            "checks#wf-00"
+          ],
+          "reviewRequired": true,
+          "capability": "molecular.dynamics.solve"
+        },
+        {
+          "id": "wf-r",
+          "kind": "action",
+          "role": "reasoner",
+          "needs": [
+            "wf-00"
+          ],
+          "consumes": [
+            "wf-00-output"
+          ],
+          "produces": [
+            "wf-r-output"
+          ],
+          "checkRefs": [
+            "checks#wf-r"
+          ],
+          "reviewRequired": false,
+          "capability": "molecular.dynamics.solve"
+        },
+        {
+          "id": "wf-01",
+          "kind": "action",
+          "role": "writer",
+          "needs": [
+            "wf-r"
+          ],
+          "consumes": [
+            "wf-r-output"
+          ],
+          "produces": [
+            "wf-01-output"
+          ],
+          "checkRefs": [
+            "checks#wf-01"
+          ],
+          "reviewRequired": true,
+          "capability": "molecular.dynamics.solve"
+        },
+        {
+          "id": "wf-02",
+          "kind": "action",
+          "role": "writer",
+          "needs": [
+            "wf-01"
+          ],
+          "consumes": [
+            "wf-01-output"
+          ],
+          "produces": [
+            "wf-02-output"
+          ],
+          "checkRefs": [
+            "checks#wf-02"
+          ],
+          "reviewRequired": true,
+          "capability": "molecular.dynamics.solve"
+        },
+        {
+          "id": "wf-03a",
+          "kind": "action",
+          "role": "writer",
+          "needs": [
+            "wf-02"
+          ],
+          "consumes": [
+            "wf-02-output"
+          ],
+          "produces": [
+            "wf-03a-output"
+          ],
+          "checkRefs": [
+            "checks#wf-03a"
+          ],
+          "reviewRequired": true,
+          "capability": "molecular.dynamics.solve"
+        },
+        {
+          "id": "execute",
+          "kind": "action",
+          "role": "executor",
+          "needs": [
+            "wf-03a"
+          ],
+          "consumes": [
+            "wf-03a-output"
+          ],
+          "produces": [
+            "execute-output"
+          ],
+          "checkRefs": [
+            "checks#execute"
+          ],
+          "reviewRequired": false,
+          "capability": "molecular.dynamics.solve"
+        },
+        {
+          "id": "wf-04",
+          "kind": "action",
+          "role": "analyst",
+          "needs": [
+            "execute"
+          ],
+          "consumes": [
+            "execute-output"
+          ],
+          "produces": [
+            "wf-04-output"
+          ],
+          "checkRefs": [
+            "checks#wf-04"
+          ],
+          "reviewRequired": false,
+          "capability": "molecular.dynamics.solve"
+        },
+        {
+          "id": "wf-05",
+          "kind": "action",
+          "role": "post-processor",
+          "needs": [
+            "wf-04"
+          ],
+          "consumes": [
+            "wf-04-output"
+          ],
+          "produces": [
+            "wf-05-output"
+          ],
+          "checkRefs": [
+            "checks#wf-05"
+          ],
+          "reviewRequired": false,
+          "capability": "molecular.dynamics.solve"
+        }
+      ]
+    }
+  ],
+  "policies": {
+    "referencePolicy": "localCaseRequired",
+    "independentReviewRequired": true,
+    "maxConsecutiveRevisions": 3,
+    "maxConsecutiveRepairFailures": 3
+  }
+}

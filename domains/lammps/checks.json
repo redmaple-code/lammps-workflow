@@ -1,0 +1,80 @@
+{
+  "items": [
+    {
+      "id": "wf-00",
+      "stage": "wf-00",
+      "check": "artifact-and-evidence"
+    },
+    {
+      "id": "wf-r",
+      "stage": "wf-r",
+      "check": "artifact-and-evidence"
+    },
+    {
+      "id": "wf-01",
+      "stage": "wf-01",
+      "check": "artifact-and-evidence"
+    },
+    {
+      "id": "wf-02",
+      "stage": "wf-02",
+      "check": "artifact-and-evidence"
+    },
+    {
+      "id": "wf-03a",
+      "stage": "wf-03a",
+      "check": "artifact-and-evidence"
+    },
+    {
+      "id": "execute",
+      "stage": "execute",
+      "check": "artifact-and-evidence"
+    },
+    {
+      "id": "wf-04",
+      "stage": "wf-04",
+      "check": "artifact-and-evidence"
+    },
+    {
+      "id": "wf-05",
+      "stage": "wf-05",
+      "check": "artifact-and-evidence"
+    },
+    {
+      "id": "mb-001",
+      "action": "blocked"
+    },
+    {
+      "id": "mb-002",
+      "action": "blocked"
+    },
+    {
+      "id": "mb-003",
+      "action": "blocked"
+    },
+    {
+      "id": "mb-004",
+      "action": "blocked"
+    },
+    {
+      "id": "mb-005",
+      "action": "blocked"
+    },
+    {
+      "id": "mb-006",
+      "action": "blocked"
+    },
+    {
+      "id": "mb-007",
+      "action": "blocked"
+    },
+    {
+      "id": "mb-008",
+      "action": "blocked"
+    },
+    {
+      "id": "mb-009",
+      "action": "blocked"
+    }
+  ]
+}

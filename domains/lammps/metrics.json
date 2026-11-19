@@ -1,0 +1,14 @@
+{
+  "items": [
+    {
+      "id": "integration-validation",
+      "requiredOutputs": [
+        "log.lammps",
+        "grinding.csv",
+        "trajectory.lammpstrj",
+        "initial.lammpstrj",
+        "final.lammpstrj"
+      ]
+    }
+  ]
+}

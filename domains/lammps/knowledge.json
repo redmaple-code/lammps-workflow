@@ -1,0 +1,15 @@
+{
+  "items": [
+    {
+      "id": "local-indent",
+      "path": "references/in.indent.lmp",
+      "kind": "case"
+    },
+    {
+      "id": "model-source",
+      "doi": "10.1557/jmr.2018.245",
+      "kind": "literature",
+      "representation": "metadata-and-repository-description"
+    }
+  ]
+}

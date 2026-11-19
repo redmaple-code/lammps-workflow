@@ -1,0 +1,32 @@
+Source LAMMPS bundled PDF Release 23Jun2022 update4; PDF page 1872
+LAMMPS Documentation, Release 23Jun2022 update4
+18.17.5 Restrictions
+none
+18.17.6 Related commands
+compute coord/atom
+18.17.7 Default
+The default for fragment/atom is single no.
+18.18 compute cna/atom command
+18.18.1 Syntax
+compute ID group-ID cna/atom cutoff
+• ID, group-ID are documented in compute command
+• cna/atom = style name of this compute command
+• cutoff = cutoff distance for nearest neighbors (distance units)
+18.18.2 Examples
+compute 1 all cna/atom 3.08
+18.18.3 Description
+Define a computation that calculates the CNA (Common Neighbor Analysis) pattern for each atom in the group. In
+solid-state systems the CNA pattern is a useful measure of the local crystal structure around an atom. The CNA
+methodology is described in (Faken) and (Tsuzuki).
+Currently, there are five kinds of CNA patterns LAMMPS recognizes:
+• fcc = 1
+• hcp = 2
+• bcc = 3
+• icosahedral = 4
+• unknown = 5
+The value of the CNA pattern will be 0 for atoms not in the specified compute group. Note that normally a CNA
+calculation should only be performed on mono-component systems.
+The CNA calculation can be sensitive to the specified cutoff value. You should insure the appropriate nearest neighbors
+of an atom are found within the cutoff distance for the presumed crystal structure. E.g. 12 nearest neighbor for perfect
+1758
+Chapter 18. Computes

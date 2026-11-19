@@ -1,0 +1,20 @@
+{
+  "items": [
+    {
+      "id": "farkas-caro-2018",
+      "elements": [
+        "Fe",
+        "Ni",
+        "Cr",
+        "Co",
+        "Cu"
+      ],
+      "pairStyle": "eam/alloy",
+      "file": "assets/FeNiCrCoCu-heafixed.setfl",
+      "source": "https://www.ctcms.nist.gov/potentials/entry/2018--Farkas-D-Caro-A--Fe-Ni-Cr-Co-Cu/",
+      "limitations": [
+        "Idealized FCC model alloy, not quantitatively fitted to all real elemental properties"
+      ]
+    }
+  ]
+}

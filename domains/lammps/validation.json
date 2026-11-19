@@ -1,0 +1,9 @@
+{
+  "items": [
+    {
+      "id": "grinding",
+      "status": "candidateValidation",
+      "method": "finite-output-contact-fixed-layer"
+    }
+  ]
+}
